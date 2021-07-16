@@ -14,9 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-<<<<<<< Updated upstream
-    return "jeremy te voy a tunelear :v";
-=======
-    return "fabian culiao eri entero perkin larva y la conchetuamre";
->>>>>>> Stashed changes
+    return "hola";
 });
