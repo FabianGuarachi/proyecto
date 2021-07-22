@@ -12,8 +12,8 @@
   </head>
   <body>
       <div class="container"> 
-          <h1>estoy en la plantilla </h1>
-          @yield('seccion')
+          
+          @yield('contenido')
       </div>
   
 
