@@ -1,3 +1,5 @@
+@extends("plantilla")
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
