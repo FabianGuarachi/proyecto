@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/articulo', function () {
     return view('articulo');
 });
+Route::get('/', function () {
+    return view('Articulos.Index');
+});
 /*Route::get('/plantilla', function () {
     return view('plantilla');
 }); */
