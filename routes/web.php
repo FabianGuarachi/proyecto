@@ -13,15 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('plantilla');
-});
-Route::get('/articulo', function () {
+
+/*Route::get('/articulo', function () {
     return view('articulo');
 });
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('Articulos.Index');
-});
+});*/
+Route::resource('articulos','App\Http\Controllers\ArticuloController');
 /*Route::get('/plantilla', function () {
     return view('plantilla');
 }); */
