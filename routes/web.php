@@ -37,7 +37,7 @@ Route::get('/Carreras', function () {
 Route::get('/Index', function () {
     return view('Articulos.Index');
 });
-Route::get('/Articulo', function () {
+Route::get('/ArticuloPaginaPrinc', function () {
     return view('Articulos.ArticuloPaginaPrinc');
 });
 
