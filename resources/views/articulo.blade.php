@@ -1,6 +1,7 @@
 @extends('plantilla')
 
 @section('contenido')
+<a href="articulos/create" class="btn btn-primary mt-2">Crear </a>
 
 <table class="table">
   <thead>

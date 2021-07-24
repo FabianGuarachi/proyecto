@@ -26,7 +26,7 @@ class ArticuloController extends Controller
      */
     public function create()
     {
-        //
+        return view('crear');
     }
 
     /**
