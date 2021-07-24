@@ -37,7 +37,11 @@ class ArticuloController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $articulos = new Articulo();
+        $articulos->id = $request->get("id");
+        $articulos->descripcion = $request->get("descripcion");
+        $articulos->save();
+        return redirect("/articulos");
     }
 
     /**
