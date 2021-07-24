@@ -1,0 +1,35 @@
+.CuadroSec{
+    z-index: 1;
+    width: 1470px;
+    height: 40px;
+    padding: 20px 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    background: rgb(224, 221, 12);
+    box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.45);
+    border-radius: 0px;
+}
+.CuadroPrinc{
+    z-index: 1;
+    width: 147px;
+    height: 40px;
+    padding: 20px 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    background: rgb(62, 228, 12);
+    box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.45);
+    border-radius: 0px;
+}
+
+.Texto{
+    width: 1230px;
+    height: 500px;
+}
+
+.ImgReferencial{
+    position: relative;
+    top: auto;
+    bottom: 530px;
+    right: auto;
+    left: 1230px;
+}
