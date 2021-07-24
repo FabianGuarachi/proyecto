@@ -38,6 +38,6 @@ Route::get('/Index', function () {
     return view('Articulos.Index');
 });
 Route::get('/Articulo', function () {
-    return view('Articulos.Articulo');
+    return view('Articulos.ArticuloPaginaPrinc');
 });
 
