@@ -10,7 +10,7 @@
                         <input type="text" class="form-control" id="id" name="id" tabindex="1"> 
                     </div>
                     <div class="mt-3">
-                        <label class="form-label" for="">DESCRIPCION</label>
+                        <label class="form-label" for="">DESCRIPCIO</label>
                         <textarea type="text" class="form-control" id="descripcion" name="descripcion" tabindex="2">  </textarea>                   
 
                     </div>
