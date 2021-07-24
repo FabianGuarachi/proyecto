@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('contenido')
-<h1> Formulario de creacion <h1>
+<h1> Formulario de creacion </h1>
 
 <div class="container mt-2">
     <div class="row justify-content-center">
