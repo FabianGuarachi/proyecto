@@ -17,7 +17,7 @@ class CreateArticulosTable extends Migration
             $table->bigIncrements('articulo_id');
             $table->string('titulo_articulo',60);
             $table->text('descripcion_articulo');
-
+            $table->string('imagen');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('user_id')->on('users');
             
