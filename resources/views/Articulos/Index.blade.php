@@ -2,7 +2,7 @@
 @extends('plantilla')
 
 @section('header')
-    <title>WikiUta</title>
+    <title>Home|WikiUTA</title>
     <link rel="stylesheet" href="{{ asset('css/EstiloIndex.css') }}">
 @endsection
 
@@ -17,7 +17,7 @@
                 <a class="btn btn-sm btn-outline-secondary" href="Registrarse.html">Registrarse</a>
             </div>
             <div class="col-4 text-center">
-              <a class="blog-header-logo text-dark" href="#">Wiki Uta</a>
+              <a class="blog-header-logo text-dark href="#"> Wiki UTA</a>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
               <a class="link-secondary" href="#" aria-label="Search">
@@ -30,14 +30,13 @@
       
         <div class="nav-scroller py-1 mb-2">
           <nav class="nav d-flex justify-content-between">
-            <a class="p-2 link-secondary" href="#">Profesores</a>
-            <a class="p-2 link-secondary" href="Carreras.html">Registraduria</a>
-            <a class="p-2 link-secondary" href="#">Asistentes sociales</a>
-            <a class="p-2 link-secondary" href="#">Servicio de salud</a>
-            <a class="p-2 link-secondary" href="#">Recaudacion</a>
+            @foreach($areas as $area)
+            <a class="p-2 link-secondary" href="#">{{$area->nombre_area}}</a>
+            @endforeach
           </nav>
         </div>
-    </div>
+</div>
+
 
       <main>     
         <div class="album py-5 bg-light">
@@ -47,7 +46,7 @@
               @foreach($articulos as $articulo)
               <div class="col">
                 <div class="card shadow-sm">
-                  <img src="Img/Img01.jpg" width="100%" height="225">
+                  <img src="{{ $articulo->imagen}}" width="100%" height="225">
       
                   <div class="card-body">
                     <p class="card-text">{{$articulo->titulo_articulo}}</p>
@@ -56,7 +55,7 @@
                         <a href="Articulo.html"><button type="button" class="btn btn-sm btn-outline-secondary">Ver</button></a>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                       </div>
-                      <small class="text-muted">{{$articulo->createt_at}}</small>
+                      <small class="text-muted">{{$articulo->created_at}}</small>
                     </div>
                   </div>
                 </div>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Articulo;
-
+use App\Models\Area;
 class ArticuloController extends Controller
 {
     /**
@@ -16,8 +16,9 @@ class ArticuloController extends Controller
 
     {   
         $articulos = Articulo::all();
+        $areas = Area::all();
         
-        return view('articulos.index')->with('articulos',$articulos);
+        return view(('articulos.index'),compact('articulos','areas'));
     }
 
     /**
