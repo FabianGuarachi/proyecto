@@ -21,13 +21,15 @@ use Illuminate\Support\Facades\Route;
     return view('Articulos.Index');
 });*/
 Route::resource('articulos','App\Http\Controllers\ArticuloController');
+
+Route::resource('empleados/{id}','App\Http\Controllers\EmpleadoController');
 /*Route::get('/plantilla', function () {
     return view('plantilla');
 }); */
 
-Route::get('/Login', function () {
+/*Route::get('/Login', function () {
     return view('Articulos.Login');
-});
+})->name('login');
 Route::get('/Registrarse', function () {
     return view('Articulos.Registrarse');
 });
@@ -42,4 +44,4 @@ Route::get('/Editar', function () {
 });
 Route::get('/Empleados', function () {
     return view('Articulos.Empleados');
-});
+});*/

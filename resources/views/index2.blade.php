@@ -1,4 +1,3 @@
-
 @extends('plantilla')
 
 @section('header')
@@ -31,7 +30,7 @@
         <div class="nav-scroller py-1 mb-2">
           <nav class="nav d-flex justify-content-between">
             @foreach($areas as $area)
-            <a class="p-2 link-secondary" href="empleados/show/{$area->area_id}">{{$area->nombre_area}}</a>
+            <a class="p-2 link-secondary" href="empleados/{$area->area_id}">{{$area->nombre_area}}</a>
             @endforeach
           </nav>
         </div>
@@ -43,19 +42,19 @@
           <div class="container">
       
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              @foreach($articulos as $articulo)
+              @foreach($empleados as $empleado)
               <div class="col">
                 <div class="card shadow-sm">
                   <img src="{{ $articulo->imagen}}" width="100%" height="225">
       
                   <div class="card-body">
-                    <p class="card-text">{{$articulo->titulo_articulo}}</p>
+                    <p class="card-text">{{$empleado->nombre}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                         <a href="Articulo.html"><button type="button" class="btn btn-sm btn-outline-secondary">Ver</button></a>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                       </div>
-                      <small class="text-muted">{{$articulo->created_at}}</small>
+                      <small class="text-muted">{{$empleado->created_at}}</small>
                     </div>
                   </div>
                 </div>
