@@ -44,102 +44,25 @@
           <div class="container">
       
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              @foreach($articulos as $articulo)
               <div class="col">
                 <div class="card shadow-sm">
                   <img src="Img/Img01.jpg" width="100%" height="225">
       
                   <div class="card-body">
-                    <p class="card-text">4ª Reunion Informativa-INDUCCIÓN DAE 2021.</p>
+                    <p class="card-text">{{$articulo->titulo_articulo}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                         <a href="Articulo.html"><button type="button" class="btn btn-sm btn-outline-secondary">Ver</button></a>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                       </div>
-                      <small class="text-muted">17/06/2021</small>
+                      <small class="text-muted">{{$articulo->createt_at}}</small>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="card shadow-sm">
-                    <img src="Img/logo.png" width="100%" height="225">
-      
-                  <div class="card-body">
-                    <p class="card-text">Publicación de nuevas becas.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                      </div>
-                      <small class="text-muted">12/06/2021</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card shadow-sm">
-                    <img src="Img/logo.png" width="100%" height="225">
-      
-                  <div class="card-body">
-                    <p class="card-text">Horario de registraduria.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                      </div>
-                      <small class="text-muted">10/06/2021</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="col">
-                <div class="card shadow-sm">
-                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Imagen Referencial</text></svg>
-      
-                  <div class="card-body">
-                    <p class="card-text">Periodo de eliminación de ramos Semestre 1.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                      </div>
-                      <small class="text-muted">01/06/2021</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card shadow-sm">
-                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Imagen Referencial</text></svg>
-      
-                  <div class="card-body">
-                    <p class="card-text">Fecha de postulación a becas y creditos y sus requisitos.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                      </div>
-                      <small class="text-muted">15/05/2021</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card shadow-sm">
-                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Imagen Referencial</text></svg>
-      
-                  <div class="card-body">
-                    <p class="card-text">¿Cómo pagar el CAE?</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                      </div>
-                      <small class="text-muted">10/05/2021</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              @endforeach
+            
+
       </main>
 @endsection

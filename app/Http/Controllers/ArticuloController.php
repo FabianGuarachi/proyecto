@@ -17,7 +17,7 @@ class ArticuloController extends Controller
     {   
         $articulos = Articulo::all();
         
-        return view('articulo')->with('articulos',$articulos);
+        return view('articulos.index')->with('articulos',$articulos);
     }
 
     /**
