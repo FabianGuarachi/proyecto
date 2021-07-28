@@ -34,10 +34,24 @@ Route::get('/Registrarse', function () {
 Route::get('/Carreras', function () {
     return view('Articulos.Navegacion.Carreras');
 });
-Route::get('/Index', function () {
+Route::get('/index', function () {
     return view('Articulos.Index');
 });
-Route::get('/ArticuloPaginaPrinc', function () {
-    return view('Articulos.ArticuloPaginaPrinc');
+Route::get('/profesor', function () {
+    return view('Articulos.Profesores');
 });
-
+Route::get('/salud', function () {
+    return view('Articulos.ServicioSalud');
+});
+Route::get('/asistentesocial', function () {
+    return view('Articulos.AsistenteSocial');
+});
+Route::get('/recaudacion', function () {
+    return view('Articulos.Recaudacion');
+});
+Route::get('/Artc', function () {
+    return view('Articulos.Artc');
+});
+Route::get('/Guardar', function () {
+    return view('Articulos.Guardar');
+});
