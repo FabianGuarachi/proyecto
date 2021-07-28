@@ -14,7 +14,7 @@
     @foreach ($articulos as $item)
     <tr>
         <td> {{$item->id}} </td>
-        <td> {{$item->descripcion}} </td>
+        <td> {{$item->nombre}} </td>
     </tr>
     @endforeach
   </tbody>

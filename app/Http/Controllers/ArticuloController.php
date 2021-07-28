@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Articulo;
+
 class ArticuloController extends Controller
 {
     /**
@@ -39,7 +40,7 @@ class ArticuloController extends Controller
     {
         $articulos = new Articulo();
         $articulos->id = $request->get("id");
-        $articulos->descripcion = $request->get("descripcion");
+        $articulos->nombre = $request->get("descripcion");
         $articulos->save();
         return redirect("/articulos");
     }

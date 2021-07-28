@@ -11,6 +11,10 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $primaryKey = 'user_id';
+    //relacion muchos a muchos
+    
+    
     /**
      * The attributes that are mass assignable.
      *
@@ -40,4 +44,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    //funcion muchos a muchos
+    public function articulos(){
+        return $this->belongsToMany(Articulo::class,'articulo_user','user_id','articulo_id');
+    }
+    //funcion muchos a muchos
+    public function empleados(){
+        return $this->belongsToMany(Empleado::class,'empleado_user','user_id','empleado_id');
+    }
+    public function articulos_uno_a_muchos(){
+        return $this->hasMany(Articulo::Class,'user_id');
+    }
 }
