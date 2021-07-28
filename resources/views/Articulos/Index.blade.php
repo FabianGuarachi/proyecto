@@ -31,7 +31,7 @@
         <div class="nav-scroller py-1 mb-2">
           <nav class="nav d-flex justify-content-between">
             <a class="p-2 link-secondary" href="#">Profesores</a>
-            <a class="p-2 link-secondary" href="Carreras.html">Carreras</a>
+            <a class="p-2 link-secondary" href="Carreras.html">Registraduria</a>
             <a class="p-2 link-secondary" href="#">Asistentes sociales</a>
             <a class="p-2 link-secondary" href="#">Servicio de salud</a>
             <a class="p-2 link-secondary" href="#">Recaudacion</a>

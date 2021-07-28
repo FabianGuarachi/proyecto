@@ -29,7 +29,7 @@
         <div class="nav-scroller py-1 mb-2">
           <nav class="nav d-flex justify-content-between">
             <a class="p-2 link-secondary" href="#">Profesores</a>
-            <a class="p-2 link-secondary" href="Carreras.html">Carreras</a>
+            <a class="p-2 link-secondary" href="Carreras.html">Recaudacion</a>
             <a class="p-2 link-secondary" href="#">Asistentes sociales</a>
             <a class="p-2 link-secondary" href="#">Servicio de salud</a>
             <a class="p-2 link-secondary" href="#">Recaudacion</a>
@@ -40,14 +40,23 @@
         <hr class="featurette-divider">
         <div class="row featurette">
           <div class="col-md-7 order-md-1">
-              <h1 class="featurette-heading">Datos del Servicio.<button>Editar</button></h1>
+              <h1 class="featurette-heading">Datos del empleado</h1>
               
-                <label>Horario de atencion</label>
-                <input type="text" class="form-control" name="area">
+                
+                <label>Nombre</label>
+                <input type="text" class="form-control" name="nombre">
                 <label>Fono</label>
                 <input type="text" class="form-control" name="fono">
                 <label>Correo electronico</label>
-                <input type="text" class="form-control" name="correo_elect">
+                <input type="text" class="form-control" name="correo_elect" placeholder="Ingrese correo válido">
+                <label>Cargo</label>
+                <input type="text" class="form-control" name="cargo">
+                <label>Imagen</label>
+                <input type="text" class="form-control" name="area" placeholder="Ingrese URL válida">
+                <div class="mt-3">
+                  <button class="btn btn-primary">Editar</button>
+                  <button class="btn btn-danger">Salir</button>
+                </div>
           </div>
 
           <div class="col-md-5 order-md-1">

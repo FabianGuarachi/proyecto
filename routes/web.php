@@ -31,27 +31,15 @@ Route::get('/Login', function () {
 Route::get('/Registrarse', function () {
     return view('Articulos.Registrarse');
 });
-Route::get('/Carreras', function () {
-    return view('Articulos.Navegacion.Carreras');
-});
-Route::get('/index', function () {
+Route::get('/Index', function () {
     return view('Articulos.Index');
-});
-Route::get('/profesor', function () {
-    return view('Articulos.Profesores');
-});
-Route::get('/salud', function () {
-    return view('Articulos.ServicioSalud');
-});
-Route::get('/asistentesocial', function () {
-    return view('Articulos.AsistenteSocial');
-});
-Route::get('/recaudacion', function () {
-    return view('Articulos.Recaudacion');
 });
 Route::get('/Artc', function () {
     return view('Articulos.Artc');
 });
-Route::get('/Guardar', function () {
-    return view('Articulos.Guardar');
+Route::get('/Editar', function () {
+    return view('Articulos.EditarArticulo');
+});
+Route::get('/Empleados', function () {
+    return view('Articulos.Empleados');
 });
