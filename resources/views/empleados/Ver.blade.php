@@ -42,15 +42,14 @@
               
                 
                 <label>Nombre</label>
-                <input type="text" class="form-control" name="nombre" value="{{$empleado->nombre}}">
+                <p  class="form-control" name="nombre" >{{$empleado->nombre}}</p>
                 <label>Fono</label>
-                <input type="text" class="form-control" name="fono">
+                <p class="form-control" name="fono">{{$empleado->fono}}</p>
                 <label>Correo electronico</label>
-                <input type="text" class="form-control" name="correo_elect" placeholder="Ingrese correo válido">
+                <p class="form-control" name="correo">{{$empleado->correo}}</p>
                 <label>Cargo</label>
-                <input type="text" class="form-control" name="cargo">
-                <label>Imagen</label>
-                <input type="text" class="form-control" name="area" placeholder="Ingrese URL válida">
+                <p class="form-control" name="cargo">{{$empleado->cargo}}</p>
+        
                 <div class="mt-3">
                   <button class="btn btn-primary">Editar</button>
                   <a class="btn btn-danger" href="/">Salir</a>
@@ -58,7 +57,7 @@
           </div>
 
           <div class="col-md-5 order-md-1">
-            <img src="Reloj.jpg" width="400" height="400">
+            <img src="{{$empleado->imagen}}" width="400" height="400">
           </div>
 
         </div>
