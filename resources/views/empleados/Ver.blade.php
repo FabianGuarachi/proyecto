@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('header')
-    <title>WikiUta/Profesor</title>
+    <title>WikiUTA</title>
     <link rel="stylesheet" href="css/BgCarreras.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <link href="css/blog.css" rel="stylesheet">

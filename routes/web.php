@@ -12,14 +12,6 @@ use App\Http\Controllers\EmpleadoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-/*Route::get('/articulo', function () {
-    return view('articulo');
-});*/
-/*Route::get('/', function () {
-    return view('Articulos.Index');
-});*/
 Route::resource('articulos','App\Http\Controllers\ArticuloController');
 Route::resource('/','App\Http\Controllers\ArticuloController');
 
@@ -38,6 +30,11 @@ Route::get('/Login', function () {
 Route::get('/Registrarse', function () {
     return view('Registrarse');
 });
+
+Route::get('/CRUD', function () {
+    return view('Crud');
+});
+/*
 /*
 Route::get('/Index', function () {
     return view('Articulos.Index');

@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('header')
-    <title>WikiUta/Profesor</title>
+    <title>WikiUTA</title>
     <link rel="stylesheet" href="css/Artc.css" />
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     <link href="css/blog.css" rel="stylesheet">
@@ -49,7 +49,7 @@
           </div>
           <div class="col-md-5 order-md-1">
             <img src="{{$articulo->imagen}}" width="400" height="380">
-            <small class="text-muted">creado por {{$user->name}}, {{$user->created_at}}</small>
+            <!--<small class="text-muted">creado por {{$user->name}}, {{$user->created_at}}</small>-->
           
           </div>
         </div>

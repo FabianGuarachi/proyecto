@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('header')
-    <title>Home|WikiUTA</title>
+    <title>WikiUTA</title>
     <link rel="stylesheet" href="{{ asset('css/EstiloIndex.css') }}">
 @endsection
 

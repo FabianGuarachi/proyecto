@@ -53,7 +53,7 @@ class User extends Authenticatable
         return $this->belongsToMany(Empleado::class,'empleado_user','user_id','empleado_id');
     }
     //un usuario tiene muchos articulos
-    public function articulos_uno_a_muchos(){
+    /*public function articulos_uno_a_muchos(){
         return $this->hasMany(Articulo::Class,'user_id');
-    }
+    }*/
 }
