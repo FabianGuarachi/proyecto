@@ -17,7 +17,7 @@ class EmpleadoController extends Controller
         //
         $empleados = Empleado::where('area_id', '=', $id)->get();
         $areas = Area::all();
-        return view(('index_empleados'),compact('empleados','areas'));
+        return view(('empleados.index_empleados'),compact('empleados','areas'));
     }
 
     /**
