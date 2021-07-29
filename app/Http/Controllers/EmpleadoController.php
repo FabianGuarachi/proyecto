@@ -49,7 +49,8 @@ class EmpleadoController extends Controller
      */
     public function mostrar($id)
     {
-        $empleado = Empleado::where('empleado_id', '=', $id)->first();
+        $empleado = Empleado::find($id);
+        
         $areas = Area::all();
        // $user = User::find($articulo->user_id);
        //dd($empleado);

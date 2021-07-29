@@ -31,12 +31,14 @@ Route::get('empleados/{id}',[EmpleadoController::class, 'index']);
     return view('plantilla');
 }); */
 
-/*Route::get('/Login', function () {
-    return view('Articulos.Login');
-})->name('login');
-Route::get('/Registrarse', function () {
-    return view('Articulos.Registrarse');
+Route::get('/Login', function () {
+    return view('Login');
 });
+
+Route::get('/Registrarse', function () {
+    return view('Registrarse');
+});
+/*
 Route::get('/Index', function () {
     return view('Articulos.Index');
 });
