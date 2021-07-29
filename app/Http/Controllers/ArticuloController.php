@@ -18,9 +18,10 @@ class ArticuloController extends Controller
 
     {   
         $articulos = Articulo::all();
+        $articulos_ordenados = $articulos->sortByDesc('updated_at');
         $areas = Area::all();
         
-        return view(('articulos.index'),compact('articulos','areas'));
+        return view(('articulos.index'),compact('articulos_ordenados','areas'));
     }
 
     /**
@@ -58,9 +59,11 @@ class ArticuloController extends Controller
     {
         //
         $articulo = Articulo::where('articulo_id', '=', $id)->first();
+        $user = User::where('user_id', '=', $articulo->user_id)->first();
+       
         $areas = Area::all();
        // $user = User::find($articulo->user_id);
-        return view(('articulos.Ver'),compact('articulo','areas'));
+        return view(('articulos.Ver'),compact('articulo','areas','user'));
     }
 
     /**

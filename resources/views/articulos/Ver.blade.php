@@ -50,6 +50,7 @@
           </div>
           <div class="col-md-5 order-md-1">
             <img src="{{$articulo->imagen}}" width="400" height="380">
+            <small class="text-muted">creado por {{$user->name}},{{$user->created_at}}</small>
           
           </div>
         </div>

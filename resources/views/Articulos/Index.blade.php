@@ -43,7 +43,7 @@
           <div class="container">
       
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              @foreach($articulos as $articulo)
+              @foreach($articulos_ordenados as $articulo)
               <div class="col">
                 <div class="card shadow-sm">
                   <img src="{{ $articulo->imagen}}" width="100%" height="225">
