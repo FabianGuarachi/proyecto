@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Empleado;
+use App\Models\Area;
 class EmpleadoController extends Controller
 {
     /**
@@ -11,12 +12,12 @@ class EmpleadoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         //
-        $empleados = Empleado::find($area->area_id);
+        $empleados = Empleado::where('area_id', '=', $id)->get();
         $areas = Area::all();
-        return view(('index2'),compact('empleados','areas'));
+        return view(('index_empleados'),compact('empleados','areas'));
     }
 
     /**
@@ -48,11 +49,11 @@ class EmpleadoController extends Controller
      */
     public function show($id)
     {
-        $empleados = Empleado::find($id);
-
+        /*$empleados = Empleado::find($id);
+        echo ($empleados);
         $areas = Area::all();
         
-        return view(('index2'),compact('empleados','areas'));
+        return view(('index2'),compact('empleados','areas'));*/
     }
 
     /**

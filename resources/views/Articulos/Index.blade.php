@@ -31,7 +31,7 @@
         <div class="nav-scroller py-1 mb-2">
           <nav class="nav d-flex justify-content-between">
             @foreach($areas as $area)
-            <a class="p-2 link-secondary" href="empleados/show/{$area->area_id}">{{$area->nombre_area}}</a>
+            <a class="p-2 link-secondary" href="empleados/{{$area->area_id}}">{{$area->nombre_area}}</a>
             @endforeach
           </nav>
         </div>
