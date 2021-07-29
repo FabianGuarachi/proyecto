@@ -52,7 +52,7 @@
                     <p class="card-text">{{$articulo->titulo_articulo}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <a href="Articulo.html"><button type="button" class="btn btn-sm btn-outline-secondary">Ver</button></a>
+                        <a class="btn btn-sm btn-outline-secondary" href="articulos/{{$articulo->articulo_id}}">Ver</a>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                       </div>
                       <small class="text-muted">{{$articulo->created_at}}</small>

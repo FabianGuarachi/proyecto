@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Articulo;
 use App\Models\Area;
+use App\Models\User;
+
 class ArticuloController extends Controller
 {
     /**
@@ -55,6 +57,10 @@ class ArticuloController extends Controller
     public function show($id)
     {
         //
+        $articulo = Articulo::where('articulo_id', '=', $id)->first();
+        $areas = Area::all();
+       // $user = User::find($articulo->user_id);
+        return view(('articulos.Ver'),compact('articulo','areas'));
     }
 
     /**

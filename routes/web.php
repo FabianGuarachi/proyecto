@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EmpleadoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +21,12 @@ use Illuminate\Support\Facades\Route;
     return view('Articulos.Index');
 });*/
 Route::resource('articulos','App\Http\Controllers\ArticuloController');
+Route::resource('/','App\Http\Controllers\ArticuloController');
 
-Route::resource('empleados/{id}','App\Http\Controllers\EmpleadoController');
+Route::resource('empleados','App\Http\Controllers\EmpleadoController',['except' => ['index','show']]);
+Route::get('empleados/{area}/{id}',[EmpleadoController::class, 'mostrar']);
+Route::get('empleados/{id}',[EmpleadoController::class, 'index']);
+
 /*Route::get('/plantilla', function () {
     return view('plantilla');
 }); */

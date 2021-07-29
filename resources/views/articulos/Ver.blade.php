@@ -15,7 +15,7 @@
                 <a class="btn btn-sm btn-outline-secondary" href="Registrarse.html">Registrarse</a>
             </div>
             <div class="col-4 text-center">
-              <a class="blog-header-logo text-dark" href="#">Wiki Uta</a>
+              <a class="blog-header-logo text-dark" href="\articulos">Wiki Uta</a>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
               <a class="link-secondary" href="#" aria-label="Search">
@@ -28,30 +28,32 @@
       
         <div class="nav-scroller py-1 mb-2">
           <nav class="nav d-flex justify-content-between">
-            <a class="p-2 link-secondary" href="#">Profesores</a>
-            <a class="p-2 link-secondary" href="Carreras.html">Registraduria</a>
-            <a class="p-2 link-secondary" href="#">Asistentes sociales</a>
-            <a class="p-2 link-secondary" href="#">Servicio de salud</a>
-            <a class="p-2 link-secondary" href="#">Recaudacion</a>
+          @foreach($areas as $area)
+            <a class="p-2 link-secondary" href="../empleados/{{$area->area_id}}">{{$area->nombre_area}}</a>
+            @endforeach
+            
           </nav>
         </div>
     </div>
     <div class="container marketing">
     
         <hr class="featurette-divider">
-    
+       
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-              <h1 class="featurette-heading"><input type="text" placeholder="Titulo"></h1>
-              <textarea rows="12" cols="78" placeholder="Descripcion"></textarea>
+              <h1 class="featurette-heading">{{$articulo->titulo_articulo}}</h1>
+              <label class =" form-group "rows="12" cols="78">{{$articulo->descripcion_articulo}}</label>
               <div class="mt-3">
                   <button class="btn btn-primary">Editar</button>
+                  <a href="\articulos" class="btn btn-secondary">Salir</a>
               </div>
           </div>
           <div class="col-md-5 order-md-1">
-            <img src="Img/Img01.jpg" width="400" height="380">
+            <img src="{{$articulo->imagen}}" width="400" height="380">
+          
           </div>
         </div>
             <hr class="featurette-divider">
         </div>
+        
 @endsection

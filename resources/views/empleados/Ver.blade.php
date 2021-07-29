@@ -15,7 +15,7 @@
                 <a class="btn btn-sm btn-outline-secondary" href="Registrarse.html">Registrarse</a>
             </div>
             <div class="col-4 text-center">
-              <a class="blog-header-logo text-dark" href="#">Wiki Uta</a>
+              <a class="blog-header-logo text-dark" href="\articulos">Wiki Uta</a>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
               <a class="link-secondary" href="#" aria-label="Search">
@@ -28,11 +28,9 @@
       
         <div class="nav-scroller py-1 mb-2">
           <nav class="nav d-flex justify-content-between">
-            <a class="p-2 link-secondary" href="#">Profesores</a>
-            <a class="p-2 link-secondary" href="Carreras.html">Recaudacion</a>
-            <a class="p-2 link-secondary" href="#">Asistentes sociales</a>
-            <a class="p-2 link-secondary" href="#">Servicio de salud</a>
-            <a class="p-2 link-secondary" href="#">Recaudacion</a>
+          @foreach($areas as $area)
+            <a class="p-2 link-secondary" href="/empleados/{{$area->area_id}}">{{$area->nombre_area}}</a>
+          @endforeach
           </nav>
         </div>
     </div>
@@ -44,7 +42,7 @@
               
                 
                 <label>Nombre</label>
-                <input type="text" class="form-control" name="nombre">
+                <input type="text" class="form-control" name="nombre" value="{{$empleado->nombre}}">
                 <label>Fono</label>
                 <input type="text" class="form-control" name="fono">
                 <label>Correo electronico</label>
@@ -55,7 +53,7 @@
                 <input type="text" class="form-control" name="area" placeholder="Ingrese URL válida">
                 <div class="mt-3">
                   <button class="btn btn-primary">Editar</button>
-                  <button class="btn btn-danger">Salir</button>
+                  <a class="btn btn-danger" href="/">Salir</a>
                 </div>
           </div>
 

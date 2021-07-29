@@ -3,21 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Empleado;
-use App\Models\Area;
-class EmpleadoController extends Controller
+
+class PlantillaController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index()
     {
         //
-        $empleados = Empleado::where('area_id', '=', $id)->get();
-        $areas = Area::all();
-        return view(('empleados.index'),compact('empleados','areas'));
     }
 
     /**
@@ -47,13 +43,9 @@ class EmpleadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function mostrar($id)
+    public function show($id)
     {
-        $empleado = Empleado::where('empleado_id', '=', $id)->first();
-        $areas = Area::all();
-       // $user = User::find($articulo->user_id);
-       //dd($empleado);
-        return view(('empleados.Ver'),compact('empleado','areas'));
+        //
     }
 
     /**

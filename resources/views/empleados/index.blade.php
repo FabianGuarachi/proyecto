@@ -51,7 +51,7 @@
                     <p class="card-text">{{$empleado->nombre}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <a href="Articulo.html"><button type="button" class="btn btn-sm btn-outline-secondary">Ver</button></a>
+                        <a href="/empleados/{{$empleado->area_id}}/{{$empleado->empleado_id}}"><button type="button" class="btn btn-sm btn-outline-secondary">Ver</button></a>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
                       </div>
                       <small class="text-muted"></small>
