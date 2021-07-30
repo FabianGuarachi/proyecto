@@ -56,8 +56,9 @@
                 <p class="form-control" name="cargo">{{$empleado->cargo}}</p>
         
                 <div class="mt-3">
-                  <button class="btn btn-primary">Editar</button>
-                  <a class="btn btn-danger" href="/">Salir</a>
+                  <a class="btn btn-primary">Editar</a>
+                  <a class="btn btn-danger">Eliminar</a>
+                  <a class="btn btn-secondary" href="/">Salir</a>
                 </div>
           </div>
 

@@ -47,8 +47,8 @@ class EmpleadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function mostrar($id)
-    {
+    public function mostrar($area , $id)
+    {   //dd($id);
         $empleado = Empleado::find($id);
         
         $areas = Area::all();
@@ -88,6 +88,8 @@ class EmpleadoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $articulo = Articulo::find($id);
+        $articulo->delete();
+        return redirect()->route('/articulos');
     }
 }
